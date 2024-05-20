@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Chater-6 Task</title>
+  </head>
+  <body>
+    <div class="left-box">
+      <div class="left-btn-box">
+        <button onclick="startImage()">start image</button>
+        <button onclick="stopImage()">stop image</button>
+      </div>
+      <div class="left-btn-box">
+        <button onclick="startColor()">start color</button>
+        <button onclick="stopColor()">stop color</button>
+      </div>
+      <div class="left-btn-box">
+        <button onclick="startLoader()">start loader</button>
+        <button onclick="stopLoader()">stop loader</button>
+      </div>
+      <div class="left-btn-box">
+        <button onclick="startZoom()">start zoom</button>
+        <button onclick="stopZoom()">stop zoom</button>
+      </div>
+    </div>
+    <div class="right-box">
+      <div class="box bg-img"></div>
+      <div class="box color-box"></div>
+      <div class="box loader-box">
+        <div class="loader-main">
+          <div class="loader"></div>
+        </div>
+      </div>
+      <div class="box circle-main">
+        <div class="circle-box"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

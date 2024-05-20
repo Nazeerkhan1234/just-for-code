@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Task for chapter-3</title>
+    <style>
+      body {
+        background-color: #6b62d3;
+      }
+      .btn {
+        color: white;
+        background-color: #6b62d3;
+        margin: 8px;
+      }
+      .card {
+        left: 280px;
+        justify-content: center;
+        align-items: center;
+      }
+      .Qns {
+        color: white;
+      }
+      .container2 {
+        padding-left: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: white; text-align: center">chapter-3 Task</h1>
+      <div class="card w-50 mt-3">
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn"
+            onclick="window.alert('alert method call')"
+          >
+            Call Alert
+          </button>
+          <button
+            type="button"
+            class="btn"
+            onclick="window.open('https://www.youtube.com/watch?v=0KpH2RYpdx8&list=PLoi8PK3q1sGFC_SSvaJN9XmiASY3hg98l&index=3&ab_channel=JustForCode')"
+          >
+            Open Video
+          </button>
+          <button type="button" class="btn" onclick="window.close()">
+            Close Window
+          </button>
+          <button type="button" class="btn" onclick="window.print()">
+            Call Print
+          </button>
+        </div>
+      </div>
+      <div class="container2">
+        <h5 class="Qns mt-3">
+          1. write a program to call alert() function with mouse event
+        </h5>
+        <h5 class="Qns">
+          2. write a program to call open() function for a video
+        </h5>
+        <h5 class="Qns">3. write a program to close the browser window</h5>
+        <h5 class="Qns">4. write a program to call print() function</h5>
+        <h5 class="Qns">
+          5. write a program to print * symbol with console.log() function
+        </h5>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      console.log("*");
+      console.log("**");
+      console.log("***");
+      console.log("****");
+      console.log("*****");
+    </script>
+  </body>
+</html>

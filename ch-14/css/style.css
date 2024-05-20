@@ -1,0 +1,41 @@
+ body{
+  background-color: #503470;
+}
+h1{
+  background-color: #000000;
+  text-align: center;
+  color: #ffff;
+}
+
+.input-wrapper {
+  display: flex;
+}
+
+.input-wrapper input {
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  background-color: #452B5F;
+  text-align: center;
+  color: #ffff;
+  outline: #482C5D;
+}
+
+.input-wrapper button {
+  background-color: #8956BF;
+  color: #000000;
+  padding: 10px;
+  font-weight: 650;
+  border-radius: 5px;
+  margin-left: 15px;
+  width: 200px;
+}
+.card{
+  height: 400px;
+  border-radius: 10px;
+  background-color:#DBCCEB;
+}
+img{
+  border-radius: 5px;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>chapter-8 task-2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #00e7ff;
+      }
+      .container-fluid {
+        margin-top: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Click on button step by step</h1>
+    </div>
+    <div class="btns">
+      <button
+        type="button"
+        class="btn btn-dark m-2 btn1 p-3"
+        onclick="bnt1()"
+      ></button
+      ><button
+        type="button"
+        class="btn btn-dark me-2 btn2 p-3"
+        onclick="bnt2()"
+      ></button
+      ><button
+        type="button"
+        class="btn btn-dark me-2 btn3 p-3"
+        onclick="bnt3()"
+      ></button
+      ><button
+        type="button"
+        class="btn btn-dark btn4 p-3"
+        onclick="bnt4()"
+      ></button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let btn = document.querySelector(".btn1");
+      let btn2 = document.querySelector(".btn2");
+      let btn3 = document.querySelector(".btn3");
+      let btn4 = document.querySelector(".btn4");
+      const bnt1 = () => {
+        btn.innerHTML = "My";
+      };
+      const bnt2 = () => {
+        btn2.innerHTML = "Name";
+      };
+      const bnt3 = () => {
+        btn3.innerHTML = "is";
+      };
+      const bnt4 = () => {
+        btn4.innerHTML = "Nazeer Khan";
+      };
+    </script>
+  </body>
+</html>

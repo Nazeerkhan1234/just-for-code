@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chapter-9 Task</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+      .input-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .input-main input{
+        width: 200px;
+        height: 25px;
+        margin: 5px;
+      }
+      .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+     .btn button{
+       background-color: red;
+       border: none;
+       color: #ffff;
+       margin-top: 10px;
+       padding: 10px;
+       width: 150px;
+       cursor: pointer;
+      }
+      .btn button:hover{
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Find Your Reminder</h1>
+    <hr />
+    <h3>Your Reminder is here : </h3>
+    <div class="input-main">
+      <input placeholder="num1"></input>
+      <input placeholder="num2"></input>
+    </div>
+    <div  class="btn">
+      <button type="button" onclick="getValue()">Get Reminder</button>
+    </div>
+  </body>
+  <script>
+    let input=document.querySelectorAll(".input-main input");
+    let h3=document.querySelector("h3");
+    const getValue=()=>{
+       let result=input[0].value%input[1].value;
+       h3.append(result);    
+    }
+  </script>
+</html>

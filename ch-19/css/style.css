@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(169, 126, 208);
+    font-family: "EB Garamond", serif;
+}
+.fistbox{
+    background-color: rgb(203, 190, 214);
+    border: 3px solid rgb(133, 107, 133);
+    border-radius: 10px;
+}

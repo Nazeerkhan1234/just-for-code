@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Chapter-12 Task</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      form {
+        margin-top: 20px;
+        margin-left: 400px;
+        width: 450px;
+        border: 2px solid black;
+      }
+
+      fieldset {
+        margin: 15px;
+      }
+      input {
+        width: 350px !important;
+      }
+      button {
+        margin-left: 150px !important;
+      }
+      span {
+        display: inline !important;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Form Validation</legend>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <br />
+          <input type="text" />
+          <span></span>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <br />
+          <input type="email" />
+          <span></span>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <br />
+          <input type="password" />
+          <span></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+  <script>
+    const warning =
+      '<i style="color: red" class="fa-solid fa-circle-exclamation"></i>';
+    const success = '<i style="color: green" class="fa-solid fa-check"></i>';
+    let form = document.querySelector("form");
+    let allInput = document.querySelectorAll("input");
+    let allSpan = document.querySelectorAll("span");
+    const nameValidation = () => {
+      let el = allInput[0];
+      el.value == ""
+        ? (el.style.borderColor = "red")
+        : (el.style.borderColor = "green");
+      el.value == ""
+        ? (allSpan[0].innerHTML = warning)
+        : (allSpan[0].innerHTML = success);
+    };
+    const mobileValidation = () => {
+      let el = allInput[1];
+      el.value == ""
+        ? (el.style.borderColor = "red")
+        : (el.style.borderColor = "green");
+      el.value == ""
+        ? (allSpan[1].innerHTML = warning)
+        : (allSpan[1].innerHTML = success);
+    };
+    const passwordValidation = () => {
+      let el = allInput[2];
+      el.value == ""
+        ? (el.style.borderColor = "red")
+        : (el.style.borderColor = "green");
+      el.value == ""
+        ? (allSpan[2].innerHTML = warning)
+        : (allSpan[2].innerHTML = success);
+    };
+    allInput[0].onblur = () => {
+      nameValidation();
+    };
+    allInput[1].onblur = () => {
+      mobileValidation();
+    };
+    allInput[2].onblur = () => {
+      passwordValidation();
+    };
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      nameValidation();
+      mobileValidation();
+      passwordValidation();
+    };
+  </script>
+</html>
