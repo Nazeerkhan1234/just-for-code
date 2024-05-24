@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Asynce</title>
+  </head>
+  <body>
+    <script>
+      // A callback is a function passed as an argument to another function
+      //  A callback function can run after another function has finished
+
+      // function myDisplayer(some) {
+      //   console.log(some);
+      // }
+      // function myCalculator(num1, num2, myCallback) {
+      //   let sum = num1 + num2;
+      //   myCallback(sum);
+      // }
+      // myCalculator(5, 5, myDisplayer);
+
+      // Functions running in parallel with other functions are called asynchronous ex- setTimeout()
+      // setTimeout(myFunction, 3000);
+      // function myFunction() {
+      //   console.log("Hello");
+      // }
+      //  or
+      // setTimeout(() => myFunction("I Love You"), 3000);
+      // function myFunction(value) {
+      //   console.log(value);
+      // }
+
+      // "Producing code" is code that can take some time
+      // "Consuming code" is code that must wait for the result
+      // A Promise is an Object that links Producing code and Consuming code
+      const login = (username, password) => {
+        return new Promise((resolve, reject) => {
+          // "Producing code"
+          if (username == "khan@gmail.com") {
+            if (password == 12345) {
+              resolve("Login success");
+            } else {
+              reject("wrong password");
+            }
+          } else {
+            reject("wrong username");
+          }
+        });
+      };
+      login("khan@gmail.com", 12345)
+        // "Consuming code"
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      // "async and await make promises easier to write"
+      // async makes a function return a Promise
+      // await makes a function wait for a Promise
+      // const checkLogin = async () => {
+      //   try {
+      //     let result = await login("khan@gmail.com", 12345);
+      //     console.log(result);
+      //   } catch (err) {
+      //     console.log(err);
+      //   }
+      // };
+      // checkLogin()
+    </script>
+  </body>
+</html>
