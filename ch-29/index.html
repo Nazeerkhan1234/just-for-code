@@ -33,11 +33,18 @@
       // "Producing code" is code that can take some time
       // "Consuming code" is code that must wait for the result
       // A Promise is an Object that links Producing code and Consuming code
+      let data = [
+        { email: "khanbhai", password: 12345 },
+        { email: "nazeer", password: 1234 },
+        { email: "ahmad", password: 123 },
+      ];
       const login = (username, password) => {
         return new Promise((resolve, reject) => {
           // "Producing code"
-          if (username == "khan@gmail.com") {
-            if (password == 12345) {
+          let email = data.find((data) => data.email == username);
+          console.log(email);
+          if (email != undefined) {
+            if (email.password == password) {
               resolve("Login success");
             } else {
               reject("wrong password");
@@ -47,7 +54,7 @@
           }
         });
       };
-      login("khan@gmail.com", 12345)
+      login("khanbhai", 12345)
         // "Consuming code"
         .then((res) => {
           console.log(res);
